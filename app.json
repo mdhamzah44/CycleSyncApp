@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "CycleSync",
+    "slug": "cyclesync",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-secure-store",
+      "expo-local-authentication",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#E91E8C"
+        }
+      ],
+      "expo-font",
+      "expo-splash-screen"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.cyclesync.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID to unlock CycleSync",
+        "NSCameraUsageDescription": "Camera access for profile photo"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#E91E8C"
+      },
+      "package": "com.cyclesync.app",
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b33016c-f683-4fb7-9b42-88ea0da2d9df"
+      }
+    }
+  }
+}
